@@ -1,0 +1,37 @@
+<odoo>
+    <record id="view_examen_form" model="ir.ui.view">
+        <field name="name">examen.form</field>
+        <field name="model">mi_modulo_academico.examen</field>
+        <field name="arch" type="xml">
+            <form string="Examen">
+                <sheet>
+                    <group>
+                        <field name="materia_id"/>
+                        <field name="profesor_id"/>
+                        <field name="fecha"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_examen_tree" model="ir.ui.view">
+        <field name="name">examen.tree</field>
+        <field name="model">mi_modulo_academico.examen</field>
+        <field name="arch" type="xml">
+            <tree string="Examen">
+                <field name="materia_id"/>
+                <field name="profesor_id"/>
+                <field name="fecha"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_examen" model="ir.actions.act_window">
+        <field name="name">Exámenes</field>
+        <field name="res_model">mi_modulo_academico.examen</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_examen" name="Exámenes" parent="menu_mi_modulo_academico_root" action="action_examen" sequence="90"/>
+</odoo>

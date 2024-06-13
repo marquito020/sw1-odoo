@@ -1,0 +1,41 @@
+<odoo>
+    <!-- Definición de la vista formulario -->
+    <record id="view_horario_form" model="ir.ui.view">
+        <field name="name">horario.form</field>
+        <field name="model">mi_modulo_academico.horario</field>
+        <field name="arch" type="xml">
+            <form string="Horario">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="hora_inicio"/>
+                        <field name="hora_fin"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Definición de la vista árbol -->
+    <record id="view_horario_tree" model="ir.ui.view">
+        <field name="name">horario.tree</field>
+        <field name="model">mi_modulo_academico.horario</field>
+        <field name="arch" type="xml">
+            <tree string="Horario">
+                <field name="name"/>
+                <field name="hora_inicio"/>
+                <field name="hora_fin"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Definición de la acción de ventana -->
+    <record id="action_horario" model="ir.actions.act_window">
+        <field name="name">Horarios</field>
+        <field name="res_model">mi_modulo_academico.horario</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Definición del menú -->
+    <menuitem id="menu_horario" name="Horarios" parent="menu_mi_modulo_academico_root" action="action_horario" sequence="40"/>
+</odoo>

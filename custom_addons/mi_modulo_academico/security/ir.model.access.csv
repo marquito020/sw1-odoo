@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_curso,access_curso,model_mi_modulo_academico_curso,,1,1,1,1
+access_aula,access_aula,model_mi_modulo_academico_aula,,1,1,1,1
+access_horario,access_horario,model_mi_modulo_academico_horario,,1,1,1,1
+access_materia,access_materia,model_mi_modulo_academico_materia,,1,1,1,1
+access_profesor,access_profesor,model_mi_modulo_academico_profesor,,1,1,1,1
+access_inscripcion,access_inscripcion,model_mi_modulo_academico_inscripcion,,1,1,1,1
+access_pago_mensualidad,access_pago_mensualidad,model_mi_modulo_academico_pago_mensualidad,,1,1,1,1
+access_examen,access_examen,model_mi_modulo_academico_examen,,1,1,1,1
+access_nota_alumno,access_nota_alumno,model_mi_modulo_academico_nota_alumno,,1,1,1,1
+access_boletin_alumno,access_boletin_alumno,model_mi_modulo_academico_boletin_alumno,,1,1,1,1
+access_reporte,access_reporte,model_mi_modulo_academico_reporte,,1,1,1,1
+access_comunicado,access_comunicado,model_mi_modulo_academico_comunicado,,1,1,1,1
+access_asistencia,access_asistencia,model_mi_modulo_academico_asistencia,,1,1,1,1

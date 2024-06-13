@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_reporte_form" model="ir.ui.view">
+        <field name="name">reporte.form</field>
+        <field name="model">mi_modulo_academico.reporte</field>
+        <field name="arch" type="xml">
+            <form string="Reporte">
+                <sheet>
+                    <group>
+                        <field name="curso_id"/>
+                        <field name="deudores_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_reporte_tree" model="ir.ui.view">
+        <field name="name">reporte.tree</field>
+        <field name="model">mi_modulo_academico.reporte</field>
+        <field name="arch" type="xml">
+            <tree string="Reporte">
+                <field name="curso_id"/>
+                <field name="deudores_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_reporte" model="ir.actions.act_window">
+        <field name="name">Reportes</field>
+        <field name="res_model">mi_modulo_academico.reporte</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_reporte" name="Reportes" parent="menu_mi_modulo_academico_root" action="action_reporte" sequence="130"/>
+</odoo>

@@ -1,0 +1,39 @@
+<odoo>
+    <record id="view_pago_mensualidad_form" model="ir.ui.view">
+        <field name="name">pago_mensualidad.form</field>
+        <field name="model">mi_modulo_academico.pago_mensualidad</field>
+        <field name="arch" type="xml">
+            <form string="Pago de Mensualidad">
+                <sheet>
+                    <group>
+                        <field name="alumno_id"/>
+                        <field name="monto"/>
+                        <field name="mes"/>
+                        <field name="nit"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_pago_mensualidad_tree" model="ir.ui.view">
+        <field name="name">pago_mensualidad.tree</field>
+        <field name="model">mi_modulo_academico.pago_mensualidad</field>
+        <field name="arch" type="xml">
+            <tree string="Pago de Mensualidad">
+                <field name="alumno_id"/>
+                <field name="monto"/>
+                <field name="mes"/>
+                <field name="nit"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_pago_mensualidad" model="ir.actions.act_window">
+        <field name="name">Pagos de Mensualidad</field>
+        <field name="res_model">mi_modulo_academico.pago_mensualidad</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_pago_mensualidad" name="Pagos de Mensualidad" parent="menu_mi_modulo_academico_root" action="action_pago_mensualidad" sequence="110"/>
+</odoo>

@@ -1,0 +1,37 @@
+<odoo>
+    <record id="view_asistencia_form" model="ir.ui.view">
+        <field name="name">asistencia.form</field>
+        <field name="model">mi_modulo_academico.asistencia</field>
+        <field name="arch" type="xml">
+            <form string="Asistencia">
+                <sheet>
+                    <group>
+                        <field name="fecha"/>
+                        <field name="alumno_id"/>
+                        <field name="profesor_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_asistencia_tree" model="ir.ui.view">
+        <field name="name">asistencia.tree</field>
+        <field name="model">mi_modulo_academico.asistencia</field>
+        <field name="arch" type="xml">
+            <tree string="Asistencia">
+                <field name="fecha"/>
+                <field name="alumno_id"/>
+                <field name="profesor_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_asistencia" model="ir.actions.act_window">
+        <field name="name">Asistencia</field>
+        <field name="res_model">mi_modulo_academico.asistencia</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_asistencia" name="Asistencia" parent="menu_mi_modulo_academico_root" action="action_asistencia" sequence="60"/>
+</odoo>

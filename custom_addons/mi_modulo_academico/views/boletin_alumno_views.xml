@@ -1,0 +1,39 @@
+<odoo>
+    <record id="view_boletin_alumno_form" model="ir.ui.view">
+        <field name="name">boletin_alumno.form</field>
+        <field name="model">mi_modulo_academico.boletin_alumno</field>
+        <field name="arch" type="xml">
+            <form string="Boletín de Alumno">
+                <sheet>
+                    <group>
+                        <field name="alumno_id"/>
+                        <field name="curso_id"/>
+                        <field name="profesor_id"/>
+                        <field name="materia_ids"/>
+                        <field name="nota_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_boletin_alumno_tree" model="ir.ui.view">
+        <field name="name">boletin_alumno.tree</field>
+        <field name="model">mi_modulo_academico.boletin_alumno</field>
+        <field name="arch" type="xml">
+            <tree string="Boletín de Alumno">
+                <field name="alumno_id"/>
+                <field name="curso_id"/>
+                <field name="profesor_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_boletin_alumno" model="ir.actions.act_window">
+        <field name="name">Boletines de Alumno</field>
+        <field name="res_model">mi_modulo_academico.boletin_alumno</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_boletin_alumno" name="Boletines de Alumno" parent="menu_mi_modulo_academico_root" action="action_boletin_alumno" sequence="140"/>
+</odoo>

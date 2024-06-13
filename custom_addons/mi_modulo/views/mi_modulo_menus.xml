@@ -1,0 +1,14 @@
+<odoo>
+    <!-- Acción de Ventana -->
+    <record id="action_mimodulo" model="ir.actions.act_window">
+        <field name="name">Mi Módulo</field>
+        <field name="res_model">mi.modulo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú Principal -->
+    <menuitem id="menu_mimodulo_root" name="Mi Módulo" sequence="10"/>
+
+    <!-- Submenú -->
+    <menuitem id="menu_mimodulo" name="Gestión" parent="menu_mimodulo_root" action="action_mimodulo" sequence="20"/>
+</odoo>

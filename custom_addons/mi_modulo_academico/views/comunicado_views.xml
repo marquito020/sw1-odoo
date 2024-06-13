@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_comunicado_form" model="ir.ui.view">
+        <field name="name">comunicado.form</field>
+        <field name="model">mi_modulo_academico.comunicado</field>
+        <field name="arch" type="xml">
+            <form string="Comunicado">
+                <sheet>
+                    <group>
+                        <field name="titulo"/>
+                        <field name="descripcion"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_comunicado_tree" model="ir.ui.view">
+        <field name="name">comunicado.tree</field>
+        <field name="model">mi_modulo_academico.comunicado</field>
+        <field name="arch" type="xml">
+            <tree string="Comunicado">
+                <field name="titulo"/>
+                <field name="descripcion"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_comunicado" model="ir.actions.act_window">
+        <field name="name">Comunicados</field>
+        <field name="res_model">mi_modulo_academico.comunicado</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_comunicado" name="Comunicados" parent="menu_mi_modulo_academico_root" action="action_comunicado" sequence="80"/>
+</odoo>

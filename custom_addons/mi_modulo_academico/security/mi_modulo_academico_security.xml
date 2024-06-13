@@ -1,0 +1,81 @@
+<odoo>
+    <!-- Grupo de seguridad para el módulo académico -->
+    <record id="group_mimodulo_academico_user" model="res.groups">
+        <field name="name">Usuario de Gestión Académica</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+
+    <!-- Reglas de acceso para los modelos -->
+    <record id="mi_modulo_academico_curso_rule" model="ir.model.access">
+        <field name="name">mi_modulo_academico.curso access</field>
+        <field name="model_id" ref="model_mi_modulo_academico_curso"/>
+        <field name="group_id" ref="mi_modulo_academico.group_mimodulo_academico_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="mi_modulo_academico_materia_rule" model="ir.model.access">
+        <field name="name">mi_modulo_academico.materia access</field>
+        <field name="model_id" ref="model_mi_modulo_academico_materia"/>
+        <field name="group_id" ref="mi_modulo_academico.group_mimodulo_academico_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="mi_modulo_academico_profesor_rule" model="ir.model.access">
+        <field name="name">mi_modulo_academico.profesor access</field>
+        <field name="model_id" ref="model_mi_modulo_academico_profesor"/>
+        <field name="group_id" ref="mi_modulo_academico.group_mimodulo_academico_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="mi_modulo_academico_boletin_alumno_rule" model="ir.model.access">
+        <field name="name">mi_modulo_academico.boletin_alumno access</field>
+        <field name="model_id" ref="model_mi_modulo_academico_boletin_alumno"/>
+        <field name="group_id" ref="mi_modulo_academico.group_mimodulo_academico_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="mi_modulo_academico_aula" model="ir.model.access">
+        <field name="name">mi_modulo_academico.aula access</field>
+        <field name="model_id" ref="model_mi_modulo_academico_aula"/>
+        <field name="group_id" ref="mi_modulo_academico.group_mimodulo_academico_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="mi_modulo_academico_horario_rule" model="ir.model.access">
+        <field name="name">mi_modulo_academico.horario access</field>
+        <field name="model_id" ref="model_mi_modulo_academico_horario"/>
+        <field name="group_id" ref="mi_modulo_academico.group_mimodulo_academico_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="mi_modulo_academico_asistencia_rule" model="ir.model.access">
+        <field name="name">mi_modulo_academico.asistencia access</field>
+        <field name="model_id" ref="model_mi_modulo_academico_asistencia"/>
+        <field name="group_id" ref="mi_modulo_academico.group_mimodulo_academico_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+    <record id="mi_modulo_academico_nota_alumno" model="ir.model.access">
+        <field name="name">mi_modulo_academico.nota_alumno access</field>
+        <field name="model_id" ref="model_mi_modulo_academico_nota_alumno"/>
+        <field name="group_id" ref="mi_modulo_academico.group_mimodulo_academico_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+</odoo>

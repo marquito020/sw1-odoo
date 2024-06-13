@@ -1,0 +1,39 @@
+<odoo>
+    <!-- Definición de la vista formulario -->
+    <record id="view_aula_form" model="ir.ui.view">
+        <field name="name">aula.form</field>
+        <field name="model">mi_modulo_academico.aula</field>
+        <field name="arch" type="xml">
+            <form string="Aula">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="numero"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Definición de la vista árbol -->
+    <record id="view_aula_tree" model="ir.ui.view">
+        <field name="name">aula.tree</field>
+        <field name="model">mi_modulo_academico.aula</field>
+        <field name="arch" type="xml">
+            <tree string="Aula">
+                <field name="name"/>
+                <field name="numero"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Definición de la acción de ventana -->
+    <record id="action_aula" model="ir.actions.act_window">
+        <field name="name">Aulas</field>
+        <field name="res_model">mi_modulo_academico.aula</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Definición del menú -->
+    <menuitem id="menu_aula" name="Aulas" parent="menu_mi_modulo_academico_root" action="action_aula" sequence="30"/>
+</odoo>

@@ -1,0 +1,28 @@
+<!-- views/mi_modulo_views.xml -->
+<odoo>
+    <record id="view_mimodulo_form" model="ir.ui.view">
+        <field name="name">mi.modulo.form</field>
+        <field name="model">mi.modulo</field>
+        <field name="arch" type="xml">
+            <form string="Mi Módulo">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_mimodulo_tree" model="ir.ui.view">
+        <field name="name">mi.modulo.tree</field>
+        <field name="model">mi.modulo</field>
+        <field name="arch" type="xml">
+            <tree string="Mi Módulo">
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
