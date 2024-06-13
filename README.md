@@ -83,13 +83,13 @@ Para facilitar la ejecución y gestión del entorno de desarrollo de Odoo, se re
 
 ```sh
 docker-compose down
-    ```
+```
 ```sh
 docker-compose up -d
-    ```
+```
 ```sh
 docker-compose up --build
-    ```
+```
 
 ## Integrantes
 
