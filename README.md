@@ -75,6 +75,22 @@ Se integra con el módulo de contabilidad para administrar los pagos, generar fa
 3. Actualiza la lista de aplicaciones en Odoo.
 4. Instala el módulo de Gestión Académica desde la interfaz de usuario de Odoo.
 
+## Uso de Docker
+
+Para facilitar la ejecución y gestión del entorno de desarrollo de Odoo, se recomienda el uso de Docker y Docker Compose. A continuación, se presentan los comandos básicos para gestionar los contenedores Docker:
+
+- **Apagar y eliminar contenedores**:
+
+```sh
+docker-compose down
+    ```
+```sh
+docker-compose up -d
+    ```
+```sh
+docker-compose up --build
+    ```
+
 ## Integrantes
 
 - **Ochoa Llusco Ever Cristian**
