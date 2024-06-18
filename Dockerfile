@@ -8,11 +8,8 @@ COPY ./odoo.conf /etc/odoo/
 # Crea un directorio para los addons personalizados si no existe
 RUN mkdir -p /mnt/extra-addons
 
-# Copia los addons personalizados en el directorio de la imagen
-COPY ./custom_addons /mnt/extra-addons
-
-# Cambia los permisos del directorio de addons
-RUN chown -R odoo:odoo /mnt/extra-addons
+# Copia los addons personalizados en el directorio de la imagen y cambia los permisos en el proceso
+COPY --chown=odoo:odoo ./custom_addons /mnt/extra-addons
 
 # Expone el puerto 8069
 EXPOSE 8069

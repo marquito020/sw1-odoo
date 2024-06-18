@@ -2,7 +2,9 @@ version: '3.1'
 
 services:
   web:
-    image: odoo:17.0
+    build:
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       - db
     ports:
@@ -16,6 +18,7 @@ services:
       - USER=odoo
       - PASSWORD=odoo
     command: odoo -i base
+    restart: always
 
   db:
     image: postgres:13
@@ -25,6 +28,7 @@ services:
       - POSTGRES_PASSWORD=odoo
     volumes:
       - odoo-db-data:/var/lib/postgresql/data
+    restart: always
 
 volumes:
   odoo-web-data:
