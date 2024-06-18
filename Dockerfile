@@ -1,4 +1,4 @@
-FROM odoo:14.0
+FROM odoo:17.0
 
 LABEL maintainer="your-email@example.com"
 

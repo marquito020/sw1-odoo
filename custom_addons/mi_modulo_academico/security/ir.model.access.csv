@@ -12,3 +12,4 @@ access_boletin_alumno,access_boletin_alumno,model_mi_modulo_academico_boletin_al
 access_reporte,access_reporte,model_mi_modulo_academico_reporte,,1,1,1,1
 access_comunicado,access_comunicado,model_mi_modulo_academico_comunicado,,1,1,1,1
 access_asistencia,access_asistencia,model_mi_modulo_academico_asistencia,,1,1,1,1
+access_padre,access_padre,model_mi_modulo_academico_padre,,1,1,1,1
