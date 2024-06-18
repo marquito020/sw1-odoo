@@ -3,6 +3,9 @@
 ## Tutorial
 [Instalacion Odoo Docker Video Tutorial](https://drive.google.com/file/d/1Se09Hlqdow9lOM6ZA3-DI5tDw01w1U0_/view?usp=sharing)
 
+## App Movil
+[Aplicacion Movil De Vistas](https://github.com/marquito020/movil-odoo.git)
+
 ## Descripción
 
 El Módulo de Gestión Académica está diseñado para administrar diversas funciones relacionadas con la gestión escolar, incluyendo matrículas, cursos, horarios, evaluaciones, pagos y más. Este módulo está integrado con los módulos de CRM y contabilidad de Odoo para proporcionar una solución completa y eficiente para las instituciones educativas.
