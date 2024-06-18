@@ -5,8 +5,8 @@ LABEL maintainer="your-email@example.com"
 # Copia el archivo de configuración en la imagen
 COPY ./odoo.conf /etc/odoo/
 
-# Crea un directorio para los addons personalizados
-RUN mkdir /mnt/extra-addons
+# Crea un directorio para los addons personalizados si no existe
+RUN mkdir -p /mnt/extra-addons
 
 # Copia los addons personalizados en el directorio de la imagen
 COPY ./custom_addons /mnt/extra-addons

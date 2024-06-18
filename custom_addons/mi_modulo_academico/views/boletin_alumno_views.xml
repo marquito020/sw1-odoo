@@ -9,8 +9,17 @@
                         <field name="alumno_id"/>
                         <field name="curso_id"/>
                         <field name="profesor_id"/>
-                        <field name="materia_ids"/>
-                        <field name="nota_ids"/>
+                        <field name="materia_ids">
+                            <tree string="Materias">
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                        <field name="nota_ids">
+                            <tree string="Notas">
+                                <field name="materia_id"/>
+                                <field name="ponderacion"/>
+                            </tree>
+                        </field>
                     </group>
                 </sheet>
             </form>
@@ -35,5 +44,5 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_boletin_alumno" name="Boletines de Alumno" parent="menu_mi_modulo_academico_root" action="action_boletin_alumno" sequence="140"/>
+    <menuitem id="menu_boletin_alumno" name="Boletines de Alumno" parent="menu_mi_modulo_academico_root" action="action_boletin_alumno" sequence="160"/>
 </odoo>

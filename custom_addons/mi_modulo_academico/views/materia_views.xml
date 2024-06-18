@@ -1,5 +1,4 @@
 <odoo>
-    <!-- Definición de la vista formulario -->
     <record id="view_materia_form" model="ir.ui.view">
         <field name="name">materia.form</field>
         <field name="model">mi_modulo_academico.materia</field>
@@ -11,13 +10,13 @@
                         <field name="curso_id"/>
                         <field name="aula_id"/>
                         <field name="horario_id"/>
+                        <field name="profesor_id"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
-    <!-- Definición de la vista árbol -->
     <record id="view_materia_tree" model="ir.ui.view">
         <field name="name">materia.tree</field>
         <field name="model">mi_modulo_academico.materia</field>
@@ -25,19 +24,16 @@
             <tree string="Materia">
                 <field name="name"/>
                 <field name="curso_id"/>
-                <field name="aula_id"/>
-                <field name="horario_id"/>
+                <field name="profesor_id"/>
             </tree>
         </field>
     </record>
 
-    <!-- Definición de la acción de ventana -->
     <record id="action_materia" model="ir.actions.act_window">
         <field name="name">Materias</field>
         <field name="res_model">mi_modulo_academico.materia</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- Definición del menú -->
-    <menuitem id="menu_materia" name="Materias" parent="menu_mi_modulo_academico_root" action="action_materia" sequence="50"/>
+    <menuitem id="menu_materia" name="Materias" parent="menu_mi_modulo_academico_root" action="action_materia" sequence="110"/>
 </odoo>

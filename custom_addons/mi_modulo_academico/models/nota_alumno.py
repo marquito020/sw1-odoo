@@ -10,4 +10,4 @@ class NotaAlumno(models.Model):
     profesor_id = fields.Many2one('mi_modulo_academico.profesor', string='Profesor', required=True)
     examen_id = fields.Many2one('mi_modulo_academico.examen', string='Examen', required=True)
     ponderacion = fields.Float(string='Ponderación', required=True)
-    boletin_id = fields.Many2one('mi_modulo_academico.boletin_alumno', string='Boletín de Alumno')
+    boletin_id = fields.Many2one('mi_modulo_academico.boletin_alumno', string='Boletín', required=False)
