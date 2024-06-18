@@ -19,6 +19,8 @@ services:
       - PASSWORD=odoo
     command: odoo -i base
     restart: always
+    networks:
+      - odoo-network
 
   db:
     image: postgres:13
@@ -31,7 +33,12 @@ services:
     volumes:
       - odoo-db-data:/var/lib/postgresql/data
     restart: always
+    networks:
+      - odoo-network
 
 volumes:
   odoo-web-data:
   odoo-db-data:
+
+networks:
+  odoo-network:
